@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="app.mapper.UserMapper">
+
+    <select id="loadUserByUsername" resultType="app.bean.User" parameterType="java.lang.String">
+        select * from user where username=#{username}
+    </select>
+    <select id="getUserRolesByUid" resultType="app.bean.Role" parameterType="java.lang.Integer">
+        select * from role r,user_roles ur where  r.id = ur.roles_id and ur.user_id = #{uid}
+    </select>
+</mapper>
