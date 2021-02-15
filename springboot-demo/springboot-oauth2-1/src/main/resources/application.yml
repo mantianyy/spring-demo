@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    database: 0
+    host: 192.168.126.136
+    port: 6379
+    password: lizichen
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
